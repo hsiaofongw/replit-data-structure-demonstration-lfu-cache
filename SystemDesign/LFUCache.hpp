@@ -12,6 +12,7 @@
 #include <iostream>
 #include <deque>
 #include <optional>
+#include <cassert>
 
 namespace SystemDesign::Cache {
 
