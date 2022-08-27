@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "SystemDesign/LFUCache.hpp"
 
 int main() {
@@ -8,6 +9,12 @@ int main() {
 
     using SystemDesign::Cache::LFUCache;
     LFUCache<> cache (capacity);
+
+    std::cout << "Available options: " << std::endl;
+    std::vector<std::string> availableOptions { "get <key>", "put <key> <value>", "show" };
+    for (const auto &opt : availableOptions) {
+        std::cout << opt << std::endl;
+    }
 
     while (true) {
         std::cout << "Instruction: ";
